@@ -11,6 +11,10 @@ run `docker-compose up`
 
 Boom, now you have a docker container running a PHP front end and an Express JS micro service side by side.
 
+The front end runs on `localhost`
+
+The Express JS backend runs on `localhost:9000`
+
 ## TODO List
 
 - [ ] Setup ENV variables
