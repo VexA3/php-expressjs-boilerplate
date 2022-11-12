@@ -17,6 +17,6 @@
             <input type="submit" value="Sign in">
         </form>
     </div>
-    <? curl_init()?>
+    <script src="/js/login.js"></script>
 </body>
 </html>
