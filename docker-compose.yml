@@ -1,0 +1,19 @@
+version: '3' # docker version
+services:
+  www: # Front end
+    image: php:apache
+    volumes:
+      - "./src/site:/var/www/html" # sync local dir with docker dir
+    ports:
+      - 80:80
+      - 443:443 # ssl traffic if needed
+    depends_on:
+      - "user"
+  user: # Login Service
+    build:
+      context: "./src/login"
+      dockerfile: ./src/login/Dockerfile
+    volumes:
+      - "./src/login:/user/src/app" # sync local dir with docker dir
+    ports:
+      - 9000:9000
