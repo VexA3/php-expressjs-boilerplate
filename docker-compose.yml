@@ -10,10 +10,10 @@ services:
     depends_on:
       - "user"
   user: # Login Service
-    build:
-      context: "./src/login"
-      dockerfile: ./src/login/Dockerfile
+    build: "./src/login"
     volumes:
       - "./src/login:/user/src/app" # sync local dir with docker dir
+    expose:
+      - 9000
     ports:
       - 9000:9000
